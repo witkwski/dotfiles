@@ -8,7 +8,6 @@ my minimalistic dotfiles.
 - zsh-antigen
 - zsh-syntax-highlighting
 - zsh-autosuggestions
-- colortest
 - tmux
 
 

@@ -1,16 +1,32 @@
 #!/bin/bash
 
-# TODO: get rid of hardcoded filenames
+backup_folder='old_dots_backup'
 
-# backup
-mkdir ~/old_dots_backup
-cp ~/.bashrc       ~/old_dots_backup
-cp ~/.bash_profile ~/old_dots_backup
-cp ~/.tmux.conf    ~/old_dots_backup
-cp ~/.zshrc        ~/old_dots_backup
+declare -a files=(
+  '.bashrc '
+  '.bash_profile'
+  '.tmux.conf'
+  '.zshrc '
+)
 
-# symlinks
-ln -fs "$(pwd)/.bash_profile" ~
-ln -fs "$(pwd)/.bashrc" ~
-ln -fs "$(pwd)/.tmux.conf" ~
-ln -fs "$(pwd)/.zshrc" ~
+backup_file() {
+  if [ -f "~/$1" ]
+  then
+    cp "$HOME/$1" "$HOME/$backup_folder"
+  fi
+}
+
+build_symlink() {
+ ln -fs "$(pwd)/src/$1" "$HOME"
+}
+
+# backup and symlinking
+if [ ! -d "$HOME/$backup_folder" ]; then
+  mkdir ~/old_dots_backup
+fi
+
+for file in "${files[@]}"
+do
+  backup_file $file
+  build_symlink $file
+done

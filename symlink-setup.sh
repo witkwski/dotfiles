@@ -1,6 +1,6 @@
 #!/bin/bash
 
-backup_folder='old_dots_backup'
+backup_folder='.old_dots_backup'
 
 declare -a files=(
   '.bashrc '
@@ -22,7 +22,7 @@ build_symlink() {
 
 # backup and symlinking
 if [ ! -d "$HOME/$backup_folder" ]; then
-  mkdir ~/old_dots_backup
+  mkdir "$HOME/$backup_folder"
 fi
 
 for file in "${files[@]}"

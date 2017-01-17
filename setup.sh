@@ -35,5 +35,5 @@ print_header 'changing shell'
 chsh -s $(which zsh)
 
 # symlink dots
-print_header 'cloning existing dots into ~/old_dots_backup and building symlinks'
+print_header 'cloning existing dots into ~/.old_dots_backup and building symlinks'
 ./symlink-setup.sh

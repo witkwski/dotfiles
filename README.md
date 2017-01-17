@@ -13,7 +13,7 @@ my minimalistic dotfiles.
 
 ## installation
 
-it backups your old dotfiles into `~/old_dots_backup` folder
+it backups your old dotfiles into `~/.old_dots_backup` folder
 
 ```sh
 $ git clone https://github.com/witkwski/dotfiles.git

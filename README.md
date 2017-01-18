@@ -1,9 +1,9 @@
 # dotfiles
 
-my minimalistic dotfiles.
+my minimalistic dotfiles. without macOS support yet.
 
 
-## includes:
+### includes:
 - zsh
 - zsh-antigen
 - zsh-syntax-highlighting
@@ -11,12 +11,26 @@ my minimalistic dotfiles.
 - tmux
 
 
-## installation
+### features:
+- minimalistic prompt
+- current branch label set to right prompt
+- autocomplete navigation
+- tmux without left and right statuses
+- tmux prefix set to `Ctrl+Space`
+
+
+### installation:
 
 it backups your old dotfiles into `~/.old_dots_backup` folder
 
 ```sh
 $ git clone https://github.com/witkwski/dotfiles.git
 $ cd dotfiles
-$ ./setup.sh
+$ ./setup
 ```
+
+### TODOS:
+- get rid of `apt` package manager
+- use submodules
+- make installation prettier and more interactive
+- add my color scheme

@@ -12,6 +12,7 @@ alias la='ls -a --color=always'
 alias g='git'
 alias projects='cd ~/Documents/projects; pwd'
 alias wtf='dpkg -L'
+alias f='du -sh'
 
 # load RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"

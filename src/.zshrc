@@ -27,7 +27,7 @@ git_prompt() {
 setopt prompt_subst
 
 export PROMPT=" %{$fg_no_bold[cyan]%}% > %{$reset_color%}% "
-export RPROMPT='%{$fg_no_bold[green]%}% $(git_prompt) %{$reset_color%}%'
+export RPROMPT='%{$fg_no_bold[green]%}% $(git_prompt)%{$reset_color%}%'
 
 # autocompletion menu
 setopt menucomplete

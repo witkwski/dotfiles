@@ -2,12 +2,12 @@
 
 # TODO: make it a little prettier
 print_header() {
-  printf '%*s\n' $(tput cols) '' | tr ' ' _
-  printf "\n$1\n"
-  printf '%*s\n' $(tput cols) '' | tr ' ' _
+  printf "\n\n\n\e[1;32m$1\n"
+  printf "%*s\e[0m\n\n" $(tput cols) "" | tr ' ' _
 }
 
 do_install() {
+  # TODO: get rid of apt
   sudo apt-get install $1
 }
 

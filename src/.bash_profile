@@ -13,6 +13,7 @@ alias g='git'
 alias projects='cd ~/Documents/projects; pwd'
 alias wtf='dpkg -L'
 alias f='du -sh'
+alias scheme='echo $bg_no_bold'
 
 # load RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"

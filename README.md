@@ -9,6 +9,7 @@ my minimalistic dotfiles. without macOS support yet.
 - zsh-syntax-highlighting
 - zsh-autosuggestions
 - tmux
+- tree
 
 
 ### features:

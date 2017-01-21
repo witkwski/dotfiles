@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 
-# TODO: make it a little prettier
+#printf "%*s\e[0m\n\n" $(tput cols) "" | tr ' ' _
 print_header() {
-  printf "\n\n\n\e[1;32m$1\n"
-  printf "%*s\e[0m\n\n" $(tput cols) "" | tr ' ' _
+  printf "\n\e[1;32m$1\n\n\e[0m"
 }
 
 do_install() {
@@ -16,6 +15,7 @@ declare -a packages=(
   'zsh-antigen'
   'tmux'
   'colortest'
+  'tree'
 )
 
 # authenticate user
@@ -23,7 +23,7 @@ sudo -v
 
 # packages
 # TODO: submodules
-print_header 'installing packages'
+print_header 'installing packages:'
 sudo apt-get update
 
 for package in "${packages[@]}"
@@ -32,9 +32,9 @@ do
 done
 
 # change shell to zsh
-print_header 'changing shell'
+print_header 'changing shell:'
 chsh -s $(which zsh)
 
 # symlink dots
-print_header 'cloning existing dots into ~/.old_dots_backup and building symlinks'
+print_header 'cloning existing dots into ~/.old_dots_backup and building symlinks:'
 ./symlink-setup

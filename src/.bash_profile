@@ -17,6 +17,10 @@ alias gcb='git checkout -b'
 
 alias rg='rails g'
 
+alias tx='tmux new -s'
+alias txls='tmux list-sessions'
+alias txat='tmux attach-session -t'
+
 alias d='dirs -v'
 alias wtf='dpkg -L'
 alias f='du -sh'

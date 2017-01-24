@@ -1,6 +1,6 @@
 # dotfiles
 
-my minimalistic dotfiles. without macOS support yet.
+my minimalistic dotfiles. without OSX support yet.
 
 
 ### includes:

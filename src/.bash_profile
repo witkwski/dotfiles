@@ -6,17 +6,23 @@ export HISTFILESIZE=2000
 export HISTCONTROL=ignoredups
 
 # aliases
-alias colors='colortest-16'
-alias rd='rm -rf'
-alias d='dirs -v'
-alias la='ls -a --color=always'
-alias g='git'
 alias projects='cd ~/Documents/projects; pwd'
+alias ...='tree -LC 2'
+alias la='ls -a --color=always'
+
+alias rd='rm -rf'
+
+alias g='git'
+alias gcb='git checkout -b'
+
+alias rg='rails g'
+
+alias d='dirs -v'
 alias wtf='dpkg -L'
 alias f='du -sh'
+
+alias colors='colortest-16'
 alias scheme='echo $bg_no_bold'
-alias rg='rails g'
-alias ...='tree -LC 2'
 
 #functions
 myip() {

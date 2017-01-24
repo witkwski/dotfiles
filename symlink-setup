@@ -16,8 +16,9 @@ backup_file() {
   fi
 }
 
+# get rid of pwd
 build_symlink() {
- ln -fs "$(pwd)/src/$1" "$HOME"
+  ln -fs "$(pwd)/src/$1" "$HOME"
 }
 
 # backup and symlinking

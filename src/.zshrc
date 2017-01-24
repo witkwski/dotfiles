@@ -1,4 +1,4 @@
-autoload -Uz colors && colors
+ autoload -Uz colors && colors
 # TODO: hardcoded antigen path
 source /usr/share/zsh-antigen/antigen.zsh
 source ~/.bash_profile

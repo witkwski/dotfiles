@@ -1,6 +1,7 @@
- autoload -Uz colors && colors
-# TODO: hardcoded antigen path
-source /usr/share/zsh-antigen/antigen.zsh
+autoload -Uz colors && colors
+
+ANTIGEN_PATH=$(dirname $(dirname $(readlink -f ~/.zshrc)))/lib/antigen/antigen.zsh
+source $ANTIGEN_PATH
 source ~/.bash_profile
 
 # bundle plugins
@@ -8,10 +9,6 @@ declare -a plugins=(
   'zsh-users/zsh-syntax-highlighting'
   'tarruda/zsh-autosuggestions'
 )
-
-bundle_zsh_plugin() {
-  antigen bundle $1
-}
 
 for plugin in "${plugins[@]}"
 do
@@ -23,6 +20,8 @@ git_prompt() {
   temp=`git symbolic-ref HEAD 2>/dev/null --short | cut -d / -f 2`
   if [ "$temp" != "" ]; then echo "$temp"; fi
 }
+
+antigen-apply
 
 setopt prompt_subst
 

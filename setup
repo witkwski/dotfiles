@@ -1,8 +1,13 @@
 #!/usr/bin/env bash
 
+if [ "$(uname)" == "Darwin" ]; then
+  printf "\e[0;31msorry, currently it doesnt support OSX :c\n\e[0m"
+  exit 1
+fi
+
 #printf "%*s\e[0m\n\n" $(tput cols) "" | tr ' ' _
 print_header() {
-  printf "\n\e[1;32m$1\n\n\e[0m"
+  printf "\n\e[0;32m$1\n\n\e[0m"
 }
 
 do_install() {
@@ -12,7 +17,6 @@ do_install() {
 
 declare -a packages=(
   'zsh'
-  'zsh-antigen'
   'tmux'
   'colortest'
   'tree'

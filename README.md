@@ -25,13 +25,13 @@ my minimalistic dotfiles. without OSX support yet.
 it backups your old dotfiles into `~/.old_dots_backup` folder
 
 ```sh
-$ git clone https://github.com/witkwski/dotfiles.git
+$ git clone --recursive https://github.com/witkwski/dotfiles.git
 $ cd dotfiles
 $ ./setup
+
 ```
 
 ### TODOS:
 - get rid of `apt` package manager
-- use submodules
 - make installation prettier and more interactive
 - add my color scheme

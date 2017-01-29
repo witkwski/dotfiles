@@ -1,3 +1,5 @@
+![Dotfiles logo](https://raw.githubusercontent.com/witkwski/dotfiles/master/images/ico.png)
+
 # dotfiles
 
 my minimalistic dotfiles. without OSX support yet.

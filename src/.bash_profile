@@ -28,9 +28,11 @@ alias f='du -sh'
 alias colors='colortest-16'
 alias scheme='echo $bg_no_bold'
 
+alias inner_ip='curl ifconfig.me'
+
 #functions
 myip() {
-  ip route get 8.8.8.8 | awk '{print $NF; exit}'
+  ifconfig -a | awk '/(cast)/ { print $2 }' | cut -d':' -f2 | head -1
 }
 
 rails_ip() {

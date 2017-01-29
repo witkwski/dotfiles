@@ -1,8 +1,8 @@
-![Dotfiles logo](https://raw.githubusercontent.com/witkwski/dotfiles/master/images/ico.png)
+![Dotfiles logo](https://github.com/witkwski/dotfiles/raw/master/images/ico.png)
 
 # dotfiles
 
-my minimalistic dotfiles. without OSX support yet.
+my minimalistic dotfiles.
 
 
 ### includes:

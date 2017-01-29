@@ -1,24 +1,12 @@
 #!/usr/bin/env bash
 
-if [ "$(uname)" == "Darwin" ]; then
-  printf "\e[0;31msorry, currently it doesnt support OSX :c\n\e[0m"
-  exit 1
-fi
-
-#printf "%*s\e[0m\n\n" $(tput cols) "" | tr ' ' _
 print_header() {
   printf "\n\e[0;32m$1\n\n\e[0m"
-}
-
-do_install() {
-  # TODO: get rid of apt
-  sudo apt-get install $1
 }
 
 declare -a packages=(
   'zsh'
   'tmux'
-  'colortest'
   'tree'
 )
 
@@ -26,14 +14,23 @@ declare -a packages=(
 sudo -v
 
 # packages
-# TODO: submodules
 print_header 'installing packages:'
-sudo apt-get update
-
-for package in "${packages[@]}"
-do
-  do_install $package
-done
+case $(uname) in
+  "Darwin")
+      for package in "${packages[@]}"
+      do
+        brew install $package
+      done
+      ;;
+  "Linux")
+      sudo apt-get update
+      sudo apt-get install colortest
+      for package in "${packages[@]}"
+      do
+        sudo apt-get install $package
+      done
+      ;;
+esac
 
 # change shell to zsh
 print_header 'changing shell:'

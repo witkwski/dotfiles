@@ -1,8 +1,14 @@
-![Dotfiles logo](https://github.com/witkwski/dotfiles/raw/master/images/ico.png)
+<p align="center">
+  <img src="https://github.com/witkwski/dotfiles/raw/master/images/ico.png" alt="tools">
+</p>
 
-# dotfiles
+<h2 align="center">
+  <b>Dotfiles</b>
+</h2>
 
-my minimalistic dotfiles.
+<p align="center">
+  my minimalistic environment setup.
+</p>
 
 
 ### includes:
@@ -32,8 +38,3 @@ $ cd dotfiles
 $ ./setup
 
 ```
-
-### TODOS:
-- get rid of `apt` package manager
-- make installation prettier and more interactive
-- add my color scheme

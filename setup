@@ -16,20 +16,20 @@ sudo -v
 # packages
 print_header 'installing packages:'
 case $(uname) in
-  "Darwin")
-      for package in "${packages[@]}"
-      do
-        brew install $package
-      done
-      ;;
-  "Linux")
-      sudo apt-get update
-      sudo apt-get install colortest
-      for package in "${packages[@]}"
-      do
-        sudo apt-get install $package
-      done
-      ;;
+  'Darwin')
+    for package in "${packages[@]}"
+    do
+      brew install $package
+    done
+    ;;
+  'Linux')
+    sudo apt-get update
+    sudo apt-get install colortest
+    for package in "${packages[@]}"
+    do
+      sudo apt-get install $package
+    done
+    ;;
 esac
 
 # change shell to zsh

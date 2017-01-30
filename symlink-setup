@@ -3,10 +3,10 @@
 backup_folder='.old_dots_backup'
 
 declare -a files=(
-  '.bashrc '
+  '.bashrc'
   '.bash_profile'
   '.tmux.conf'
-  '.zshrc '
+  '.zshrc'
 )
 
 backup_file() {
@@ -16,7 +16,7 @@ backup_file() {
   fi
 }
 
-# get rid of pwd
+# TODO: get rid of pwd
 build_symlink() {
   ln -fs "$(pwd)/src/$1" "$HOME"
 }

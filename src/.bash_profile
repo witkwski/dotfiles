@@ -32,7 +32,7 @@ alias inner_ip='curl ifconfig.me'
 
 #functions
 myip() {
-  ifconfig -a | awk '/(cast)/ { print $2 }' | cut -d':' -f2 | head -1
+  ifconfig -a | awk '/(cast)/ { print $2 }' | cut -d ':' -f2 | head -1
 }
 
 rails_ip() {

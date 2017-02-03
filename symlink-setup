@@ -30,4 +30,5 @@ for file in "${files[@]}"
 do
   backup_file $file
   build_symlink $file
+  printf "$file symlinked to $HOME\n"
 done

@@ -1,6 +1,6 @@
 autoload -Uz colors && colors
 
-ANTIGEN_PATH=$(dirname $(dirname $(readlink -f ~/.zshrc)))/lib/antigen/antigen.zsh
+ANTIGEN_PATH=$(dirname $(dirname $(readlink ~/.zshrc)))/lib/antigen/antigen.zsh
 source $ANTIGEN_PATH
 source ~/.bash_profile
 

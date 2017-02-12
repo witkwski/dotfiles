@@ -8,6 +8,7 @@ declare -a packages=(
   'zsh'
   'tmux'
   'tree'
+  'coreutils'
 )
 
 # authenticate user
@@ -38,4 +39,4 @@ chsh -s $(which zsh)
 
 # symlink dots
 print_header 'cloning existing dots into ~/.old_dots_backup and building symlinks:'
-./symlink-setup
+source symlink-setup

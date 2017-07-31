@@ -1,6 +1,8 @@
 # vars
 export BUNDLER_EDITOR=subl
 export EDITOR=subl
+export HISTFILE=~/.zsh_history
+export SAVEHIST=100
 export HISTSIZE=1000
 export HISTFILESIZE=2000
 export HISTCONTROL=ignoredups
@@ -27,11 +29,15 @@ alias txat='tmux attach-session -t'
 # travelling
 alias d='dirs -v'
 alias wtf='dpkg -L'
-alias f='du -sh'
 
 # other
 alias colors='colortest-16'
 alias scheme='echo $bg_no_bold'
+
+# mem
+alias fit='du -sh'
+alias lss='ls -la --block-size=M'
+alias used='du -chd 1 | sort -h | head -10'
 
 #functions
 myip() {

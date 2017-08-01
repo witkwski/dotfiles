@@ -39,4 +39,5 @@ chsh -s $(which zsh)
 
 # symlink dots
 print_header 'cloning existing dots into ~/.old_dots_backup and building symlinks:'
+# fix symlink path to absolute
 source symlink-setup

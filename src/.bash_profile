@@ -1,6 +1,7 @@
 # vars
 export BUNDLER_EDITOR=subl
 export EDITOR=subl
+
 export HISTFILE=~/.zsh_history
 export SAVEHIST=100
 export HISTSIZE=1000
@@ -28,9 +29,12 @@ alias txat='tmux attach-session -t'
 
 # travelling
 alias d='dirs -v'
-alias wtf='dpkg -L'
+
+# history
+alias h='history'
 
 # other
+alias wtf='dpkg -L'
 alias colors='colortest-16'
 alias scheme='echo $bg_no_bold'
 

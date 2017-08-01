@@ -2,6 +2,15 @@
 
 backup_folder='.old_dots_backup'
 
+case $(uname) in
+  'Darwin')
+    source_folder="$(dirname $(greadlink -f $BASH_SOURCE))/src"
+    ;;
+  'Linux')
+    source_folder="$(dirname $(readlink -f $0))/src"
+    ;;
+esac
+
 declare -a files=(
   '.bashrc'
   '.bash_profile'
@@ -10,14 +19,14 @@ declare -a files=(
 )
 
 backup_file() {
-  if [ -f "~/$1" ]
+  if [ -f "$HOME/$1" ]
   then
     cp "$HOME/$1" "$HOME/$backup_folder"
   fi
 }
 
 build_symlink() {
-  ln -fs "$(dirname $(readlink -f $0))/src/$1" "$HOME"
+  ln -fs "$source_folder/$1" $HOME
 }
 
 # backup and symlinking

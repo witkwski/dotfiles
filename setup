@@ -38,6 +38,14 @@ print_header 'changing shell:'
 chsh -s $(which zsh)
 
 # symlink dots
-print_header 'cloning existing dots into ~/.old_dots_backup and building symlinks:'
-# fix symlink path to absolute
-source symlink-setup
+print_header 'moving old dots into ~/.old_dots_backup and building symlinks:'
+case $(uname) in
+  'Darwin')
+    symlink_setup="$(dirname $(greadlink -f $BASH_SOURCE))/symlink_setup"
+    ;;
+  'Linux')
+    symlink_setup="$(dirname $(readlink -f $0))/symlink_setup"
+    ;;
+esac
+
+source $symlink_setup

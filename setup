@@ -33,9 +33,16 @@ case $(uname) in
     ;;
 esac
 
-# change shell to zsh
 print_header 'changing shell:'
-chsh -s $(which zsh)
+# change shell to zsh
+case $(uname) in
+  'Darwin')
+    chsh -s '/bin/zsh'
+    ;;
+  'Linux')
+    chsh -s $(which zsh)
+    ;;
+esac
 
 # symlink dots
 print_header 'moving old dots into ~/.old_dots_backup and building symlinks:'

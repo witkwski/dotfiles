@@ -20,6 +20,11 @@
 - tree
 
 
+<p align="center">
+  <img src="https://github.com/witkwski/dotfiles/raw/master/images/screen.jpg" alt="screeshot">
+</p>
+
+
 ### features:
 - minimalistic prompt
 - current branch label set to right prompt
@@ -27,6 +32,7 @@
 - history menu on `down arrow`
 - tmux without left and right statuses
 - tmux prefix set to `Ctrl+Space`
+- loads `~/.aliases` file if it exists
 
 
 ### installation:
@@ -39,5 +45,3 @@ $ cd dotfiles
 $ ./setup
 
 ```
-
-it loads `~/.aliases` file if it exists

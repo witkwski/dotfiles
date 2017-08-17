@@ -4,6 +4,9 @@ ANTIGEN_PATH=$(dirname $(dirname $(readlink ~/.zshrc)))/lib/antigen/antigen.zsh
 source $ANTIGEN_PATH
 source ~/.bash_profile
 
+# custom aliases
+[ -s "$HOME/.aliases" ] && source "$HOME/.aliases"
+
 # bundle plugins
 declare -a plugins=(
   'zsh-users/zsh-syntax-highlighting'

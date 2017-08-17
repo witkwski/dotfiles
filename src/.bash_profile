@@ -2,12 +2,6 @@
 export BUNDLER_EDITOR=subl
 export EDITOR=subl
 
-export HISTFILE=~/.zsh_history
-export SAVEHIST=100
-export HISTSIZE=1000
-export HISTFILESIZE=2000
-export HISTCONTROL=ignoredups
-
 # aliases
 alias projects='cd ~/Documents/projects; pwd'
 alias ...='tree -LC 2'

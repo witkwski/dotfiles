@@ -24,6 +24,7 @@
 - minimalistic prompt
 - current branch label set to right prompt
 - autocomplete navigation
+- history menu on `down arrow`
 - tmux without left and right statuses
 - tmux prefix set to `Ctrl+Space`
 
@@ -38,3 +39,5 @@ $ cd dotfiles
 $ ./setup
 
 ```
+
+it loads `~/.aliases` file if it exists

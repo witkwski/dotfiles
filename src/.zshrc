@@ -1,11 +1,15 @@
 autoload -Uz colors && colors
+autoload -Uz history-beginning-search-menu
 
+# find antigen
 ANTIGEN_PATH=$(dirname $(dirname $(readlink ~/.zshrc)))/lib/antigen/antigen.zsh
 source $ANTIGEN_PATH
+
+# bash profile
 source ~/.bash_profile
 
 # custom aliases
-[ -s "$HOME/.aliases" ] && source "$HOME/.aliases"
+[ -f "$HOME/.aliases" ] && source "$HOME/.aliases"
 
 # bundle plugins
 declare -a plugins=(
@@ -34,3 +38,18 @@ export RPROMPT='%{$fg_no_bold[green]%}% $(git_prompt)%{$reset_color%}%'
 # autocompletion menu
 setopt menucomplete
 zstyle ':completion:*' menu select=1 _complete _ignored _approximate
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' # case insensitive
+zstyle ':completion:*' insert-tab pending
+
+# history
+setopt EXTENDED_HISTORY # add timestamps
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_REDUCE_BLANKS
+setopt SHARE_HISTORY # share history between sessions
+
+export HISTFILE=~/.zsh_history
+export SAVEHIST=100
+export HISTSIZE=1000
+
+zle -N history-beginning-search-menu
+bindkey '^[[B' history-beginning-search-menu # set history menu to down arrow

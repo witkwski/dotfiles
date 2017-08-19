@@ -1,9 +1,9 @@
 <p align="center">
-  <img src="https://github.com/witkwski/dotfiles/raw/master/images/ico.png" alt="tools">
+  <img src="http://i.imgur.com/JRNn79m.png" alt="tools">
 </p>
 
 <h2 align="center">
-  <b>Dotfiles</b>
+  <b>anton witkowski dotfiles</b>
 </h2>
 
 <p align="center">
@@ -20,9 +20,7 @@
 - tree
 
 
-<p align="center">
-  <img src="https://github.com/witkwski/dotfiles/raw/master/images/screen.jpg" alt="screeshot">
-</p>
+![screenshot](http://i.imgur.com/6VL5IlK.jpg)
 
 
 ### features:

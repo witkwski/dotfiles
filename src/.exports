@@ -1,0 +1,2 @@
+export BUNDLER_EDITOR=subl
+export EDITOR=subl

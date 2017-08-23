@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-print_header() {
+_print_header() {
   printf "\n\e[0;32m > $1\n\n\e[0m"
 }
 
@@ -15,7 +15,7 @@ declare -a packages=(
 sudo -v
 
 # packages
-print_header 'installing packages:'
+_print_header 'installing packages:'
 case $(uname) in
   'Darwin')
     for package in "${packages[@]}"
@@ -33,7 +33,7 @@ case $(uname) in
     ;;
 esac
 
-print_header 'changing shell:'
+_print_header 'changing shell:'
 # change shell to zsh
 case $(uname) in
   'Darwin')
@@ -45,7 +45,7 @@ case $(uname) in
 esac
 
 # symlink dots
-print_header 'moving old dots into ~/.old_dots_backup and building symlinks:'
+_print_header 'moving old dots into ~/.old_dots_backup and building symlinks:'
 case $(uname) in
   'Darwin')
     symlink_setup="$(dirname $(greadlink -f $BASH_SOURCE))/symlink_setup"

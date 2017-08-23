@@ -2,6 +2,17 @@
 
 backup_folder='.old_dots_backup'
 
+_backup_file() {
+  if [ -f "$HOME/$1" ]
+  then
+    cp "$HOME/$1" "$HOME/$backup_folder"
+  fi
+}
+
+_build_symlink() {
+  ln -fs "$source_folder/$1" $HOME
+}
+
 case $(uname) in
   'Darwin')
     source_folder="$(dirname $(greadlink -f $BASH_SOURCE))/src"
@@ -16,18 +27,10 @@ declare -a files=(
   '.bash_profile'
   '.tmux.conf'
   '.zshrc'
+  '.aliases'
+  '.functions'
+  '.exports'
 )
-
-backup_file() {
-  if [ -f "$HOME/$1" ]
-  then
-    cp "$HOME/$1" "$HOME/$backup_folder"
-  fi
-}
-
-build_symlink() {
-  ln -fs "$source_folder/$1" $HOME
-}
 
 # backup and symlinking
 if [ ! -d "$HOME/$backup_folder" ]; then
@@ -36,7 +39,7 @@ fi
 
 for file in "${files[@]}"
 do
-  backup_file $file
-  build_symlink $file
+  _backup_file $file
+  _build_symlink $file
   printf "$file symlinked to $HOME\n"
 done

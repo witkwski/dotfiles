@@ -1,0 +1,33 @@
+# files
+alias f='tree -LC 2'
+alias l='ls -a --color=always'
+alias rd='rm -rf'
+
+# travelling
+alias projects='cd ~/Documents/projects; pwd'
+alias d='dirs -v'
+
+# history
+alias h='history'
+
+# git
+alias g='git'
+alias gcb='git checkout -b'
+
+# rails
+alias rg='rails g'
+
+# tmux
+alias tx='tmux new -s'
+alias txls='tmux list-sessions'
+alias txat='tmux attach-session -t'
+
+# other
+alias wtf='dpkg -L'
+alias colors='colortest-16'
+alias scheme='echo $bg_no_bold'
+
+# mem
+alias fit='du -sh'
+alias lss='ls -la --block-size=M'
+alias used='du -chd 1 | sort -h | head -10'

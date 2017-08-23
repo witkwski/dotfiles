@@ -30,7 +30,7 @@
 - history menu on `down arrow`
 - tmux without left and right statuses
 - tmux prefix set to `Ctrl+Space`
-- loads `~/.aliases` file if it exists
+- loads `~/.customs` file if it exists
 
 
 ### installation:

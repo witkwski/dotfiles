@@ -5,11 +5,14 @@ autoload -Uz history-beginning-search-menu
 ANTIGEN_PATH=$(dirname $(dirname $(readlink ~/.zshrc)))/lib/antigen/antigen.zsh
 source $ANTIGEN_PATH
 
-# bash profile
+# profile
 source ~/.bash_profile
+source ~/.exports
+source ~/.aliases
+source ~/.functions
 
-# custom aliases
-[ -f "$HOME/.aliases" ] && source "$HOME/.aliases"
+# customs if exists
+[ -f "$HOME/.customs" ] && source "$HOME/.custom"
 
 # bundle plugins
 declare -a plugins=(

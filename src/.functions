@@ -1,0 +1,8 @@
+#functions
+myip() {
+  ifconfig -a | awk '/(cast)/ { print $2 }' | cut -d ':' -f2 | head -1
+}
+
+rails_ip() {
+  rails s -b $(myip)
+}

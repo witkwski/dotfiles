@@ -1,3 +1,5 @@
+# TODO: clean this mess
+
 autoload -Uz colors && colors
 autoload -Uz history-beginning-search-menu
 
@@ -49,6 +51,7 @@ setopt EXTENDED_HISTORY # add timestamps
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_REDUCE_BLANKS
 setopt SHARE_HISTORY # share history between sessions
+setopt APPEND_HISTORY
 
 export HISTFILE=~/.zsh_history
 export SAVEHIST=100

@@ -10,6 +10,7 @@
   my minimalistic environment setup.
 </p>
 
+this is my system tools and preferences I use on everyday basis. I dont like oh-my-zsh and I prefer much more minimalistical environment. you can see more dotfiles [here](https://dotfiles.github.io)
 
 ### includes:
 - zsh

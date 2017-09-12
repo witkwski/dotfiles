@@ -4,7 +4,9 @@ alias l='ls -a --color=always'
 alias rd='rm -rf'
 
 # travelling
+alias downcloads='cd ~/Downloads; pwd'
 alias projects='cd ~/Documents/projects; pwd'
+alias work='cd ~/Documents/works; pwd'
 alias d='dirs -v'
 
 # history

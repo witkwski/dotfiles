@@ -26,9 +26,8 @@ this is my system tools and preferences I use on everyday basis. I dont like oh-
 
 ### features:
 - minimalistic prompt
-- current branch label set to right prompt
+- current branch label set to the right prompt
 - autocomplete navigation
-- history menu on `down arrow`
 - tmux without left and right statuses
 - tmux prefix set to `Ctrl+Space`
 - loads `~/.customs` file if it exists

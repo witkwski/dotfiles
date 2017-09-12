@@ -56,6 +56,3 @@ setopt APPEND_HISTORY
 export HISTFILE=~/.zsh_history
 export SAVEHIST=100
 export HISTSIZE=1000
-
-zle -N history-beginning-search-menu
-bindkey '^[[B' history-beginning-search-menu # set history menu to down arrow

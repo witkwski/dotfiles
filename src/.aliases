@@ -1,12 +1,13 @@
 # files
-alias f='tree -LC 2'
-alias l='ls -a --color=always'
+alias f='tree -LCFhfla 1 --dirsfirst'
+alias l='ls -lap --color=always'
 alias rd='rm -rf'
+alias b='cd ..'
 
 # travelling
-alias downcloads='cd ~/Downloads; pwd'
+alias downloads='cd ~/Downloads; pwd'
 alias projects='cd ~/Documents/projects; pwd'
-alias work='cd ~/Documents/works; pwd'
+alias work='cd ~/Documents/work; pwd'
 alias d='dirs -v'
 
 # history
@@ -31,5 +32,9 @@ alias scheme='echo $bg_no_bold'
 
 # mem
 alias fit='du -sh'
-alias lss='ls -la --block-size=M'
 alias used='du -chd 1 | sort -h | head -10'
+alias fatest='du --max-depth=10 . | sort -n'
+
+# docker
+alias dcom='docker-compose'
+alias dall='docker container ls --all'

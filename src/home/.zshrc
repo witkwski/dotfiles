@@ -4,7 +4,7 @@ autoload -Uz colors && colors
 autoload -Uz history-beginning-search-menu
 
 # find antigen
-ANTIGEN_PATH=$(dirname $(dirname $(readlink ~/.zshrc)))/lib/antigen/antigen.zsh
+ANTIGEN_PATH=$(dirname $(dirname $(readlink ~/.zshrc)))/../lib/antigen/antigen.zsh
 source $ANTIGEN_PATH
 
 # profile

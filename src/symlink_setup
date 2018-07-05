@@ -10,15 +10,15 @@ _backup_file() {
 }
 
 _build_symlink() {
-  ln -fs "$source_folder/$1" $HOME
+  ln -fs "$dots_folder/$1" $HOME
 }
 
 case $(uname) in
   'Darwin')
-    source_folder="$(dirname $(greadlink -f $BASH_SOURCE))/src"
+    dots_folder="$(dirname $(greadlink -f $BASH_SOURCE))/home"
     ;;
   'Linux')
-    source_folder="$(dirname $(readlink -f $0))/src"
+    dots_folder="$(dirname $(readlink -f $0))/home"
     ;;
 esac
 

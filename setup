@@ -4,6 +4,21 @@ _print_header() {
   printf "\n\e[0;32m > $1\n\n\e[0m"
 }
 
+# authenticate user
+sudo -v
+
+# prepare
+case $(uname) in
+  'Darwin')
+    full_path="$(dirname $(greadlink -f $BASH_SOURCE))"
+    ;;
+  'Linux')
+    full_path="$(dirname $(readlink -f $0))"
+    ;;
+esac
+
+# packages
+_print_header 'installing packages:'
 declare -a packages=(
   'zsh'
   'tmux'
@@ -11,13 +26,12 @@ declare -a packages=(
   'coreutils'
 )
 
-# authenticate user
-sudo -v
-
-# packages
-_print_header 'installing packages:'
 case $(uname) in
   'Darwin')
+    brew cask install iterm2
+    brew cask install spectacle
+    brew cask install sublime-text
+
     for package in "${packages[@]}"
     do
       brew install $package
@@ -25,7 +39,7 @@ case $(uname) in
     ;;
   'Linux')
     sudo apt-get update
-    sudo apt-get install colortest
+
     for package in "${packages[@]}"
     do
       sudo apt-get install $package
@@ -33,26 +47,18 @@ case $(uname) in
     ;;
 esac
 
-_print_header 'changing shell:'
 # change shell to zsh
+_print_header 'changing shell:'
+chsh -s '/bin/zsh'
+
+# os specific settings
+_print_header 'os specific settings:'
 case $(uname) in
   'Darwin')
-    chsh -s '/bin/zsh'
-    ;;
-  'Linux')
-    chsh -s $(which zsh)
-    ;;
+     source "$full_path/src/osx"
+     ;;
 esac
 
 # symlink dots
 _print_header 'moving old dots into ~/.old_dots_backup and building symlinks:'
-case $(uname) in
-  'Darwin')
-    symlink_setup="$(dirname $(greadlink -f $BASH_SOURCE))/symlink_setup"
-    ;;
-  'Linux')
-    symlink_setup="$(dirname $(readlink -f $0))/symlink_setup"
-    ;;
-esac
-
-source $symlink_setup
+source "$full_path/src/symlink_setup"

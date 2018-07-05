@@ -5,9 +5,6 @@ alias rd='rm -rf'
 alias b='cd ..'
 
 # travelling
-alias downloads='cd ~/Downloads; pwd'
-alias projects='cd ~/Documents/projects; pwd'
-alias work='cd ~/Documents/work; pwd'
 alias d='dirs -v'
 
 # history
@@ -26,8 +23,6 @@ alias txls='tmux list-sessions'
 alias txat='tmux attach-session -t'
 
 # other
-alias wtf='dpkg -L'
-alias colors='colortest-16'
 alias scheme='echo $bg_no_bold'
 
 # mem

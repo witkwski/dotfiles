@@ -12,26 +12,7 @@
 
 this is my system tools and preferences I use on everyday basis. I dont like oh-my-zsh and I prefer much more minimalistical environment. you can see more dotfiles [here](https://dotfiles.github.io)
 
-### includes:
-- zsh
-- zsh-antigen
-- zsh-syntax-highlighting
-- zsh-autosuggestions
-- tmux
-- tree
-
-
-![screenshot](http://i.imgur.com/6VL5IlK.jpg)
-
-
-### features:
-- minimalistic prompt
-- current branch label set to the right prompt
-- autocomplete navigation
-- tmux without left and right statuses
-- tmux prefix set to `Ctrl+Space`
-- loads `~/.customs` file if it exists
-
+![screenshot](http://i.imgur.com/kVWrSmY.png)
 
 ### installation:
 

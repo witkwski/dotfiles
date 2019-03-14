@@ -30,7 +30,7 @@ git_prompt() {
   if [ "$temp" != "" ]; then echo "$temp"; fi
 }
 
-antigen-apply
+antigen apply
 
 setopt prompt_subst
 

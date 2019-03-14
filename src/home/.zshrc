@@ -13,9 +13,6 @@ source ~/.exports
 source ~/.aliases
 source ~/.functions
 
-# customs if exists
-[ -f "$HOME/.customs" ] && source "$HOME/.custom"
-
 # bundle plugins
 declare -a plugins=(
   'zsh-users/zsh-syntax-highlighting'
@@ -56,3 +53,6 @@ setopt APPEND_HISTORY
 export HISTFILE=~/.zsh_history
 export SAVEHIST=100
 export HISTSIZE=1000
+
+# customs if exists
+[ -f "$HOME/.customs" ] && source "$HOME/.customs"

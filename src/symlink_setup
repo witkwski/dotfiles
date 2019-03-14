@@ -18,7 +18,7 @@ case $(uname) in
     dots_folder="$(dirname $(greadlink -f $BASH_SOURCE))/home"
     ;;
   'Linux')
-    dots_folder="$(dirname $(readlink -f $0))/home"
+    dots_folder="$(dirname $(readlink -f $0))/src/home"
     ;;
 esac
 

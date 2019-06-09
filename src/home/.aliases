@@ -1,6 +1,6 @@
 # files
 alias f='tree -LCFhfla 1 --dirsfirst'
-alias l='ls -lap --color=always'
+alias l='ls -lapGho'
 alias rd='rm -rf'
 alias b='cd ..'
 

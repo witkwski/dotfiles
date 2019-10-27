@@ -55,4 +55,4 @@ export SAVEHIST=100
 export HISTSIZE=1000
 
 # customs if exists
-[ -f "$HOME/.customs" ] && source "$HOME/.customs"
+[ -f "$HOME/dotfiles_custom" ] && source "$HOME/dotfiles_custom"

@@ -24,3 +24,10 @@ $ cd dotfiles
 $ ./setup
 
 ```
+
+### customs:
+
+```sh
+touch ~/.dotfiles_custom
+```
+

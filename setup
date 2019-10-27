@@ -19,7 +19,7 @@ esac
 
 # packages
 _print_header 'installing packages:'
-declare -a packages=(
+declare -a common_packages=(
   'zsh'
   'tmux'
   'tree'
@@ -30,10 +30,16 @@ case $(uname) in
   'Darwin')
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     brew cask install iterm2
-    brew cask install spectacle
-    brew cask install sublime-text
 
-    for package in "${packages[@]}"
+    printf '\n\e[0;32minstall stuff? (sublime, etc.)\n\e[0m'
+    read -p "y/n: "
+    if [[ $REPLY =~ ^[Yy]$ ]]
+    then
+      brew cask install spectacle
+      brew cask install sublime-text
+    fi
+
+    for package in "${common_packages[@]}"
     do
       brew install $package
     done
@@ -41,7 +47,7 @@ case $(uname) in
   'Linux')
     sudo apt-get update
 
-    for package in "${packages[@]}"
+    for package in "${common_packages[@]}"
     do
       sudo apt-get install $package
     done

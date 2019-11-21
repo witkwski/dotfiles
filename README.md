@@ -1,22 +1,18 @@
-<p align="center">
-  <img src="http://i.imgur.com/JRNn79m.png" alt="tools">
-</p>
+![screenshot](https://i.imgur.com/Crhgmbf.png)
 
-<h2 align="center">
-  <b>anton witkowski dotfiles</b>
-</h2>
+<h3 align="center">
+  witkowski dotfiles
+</h3>
 
 <p align="center">
-  my minimalistic environment setup.
+  My environment setup.</br>
+  I prefer more minimalistic environment.</br>  
+  You can see more dotfiles <a href="https://dotfiles.github.io">here</a>.
 </p>
 
-this is my system tools and preferences I use on everyday basis. I dont like oh-my-zsh and I prefer much more minimalistical environment. you can see more dotfiles [here](https://dotfiles.github.io)
+### Installation:
 
-![screenshot](http://i.imgur.com/kVWrSmY.png)
-
-### installation:
-
-it backups your old dotfiles into `~/.old_dots_backup` folder
+It backups your old dotfiles into `~/.old_dots_backup` folder
 
 ```sh
 $ git clone --recursive https://github.com/witkwski/dotfiles.git
@@ -25,7 +21,7 @@ $ ./setup
 
 ```
 
-### customs:
+### Customs:
 
 ```sh
 touch ~/.dotfiles_custom

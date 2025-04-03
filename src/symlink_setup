@@ -23,12 +23,8 @@ case $(uname) in
 esac
 
 declare -a files=(
-  '.bashrc'
-  '.bash_profile'
   '.tmux.conf'
   '.zshrc'
-  '.aliases'
-  '.functions'
   '.exports'
 )
 

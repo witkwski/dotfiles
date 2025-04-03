@@ -28,16 +28,7 @@ declare -a common_packages=(
 
 case $(uname) in
   'Darwin')
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-    brew cask install iterm2
-
-    printf '\n\e[0;32minstall stuff? (sublime, etc.)\n\e[0m'
-    read -p "y/n: "
-    if [[ $REPLY =~ ^[Yy]$ ]]
-    then
-      brew cask install spectacle
-      brew cask install sublime-text
-    fi
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
     for package in "${common_packages[@]}"
     do
@@ -66,6 +57,6 @@ case $(uname) in
      ;;
 esac
 
-# symlink dots
+# symlink the dotfiles
 _print_header 'moving old dots into ~/.old_dots_backup and building symlinks:'
 source "$full_path/src/symlink_setup"

@@ -1,12 +1,10 @@
-![screenshot](https://i.imgur.com/Crhgmbf.png)
-
 <h3 align="center">
-  witkowski dotfiles
+  Anton Witkowski dotfiles
 </h3>
 
 <p align="center">
-  My environment setup.</br>
-  I prefer more minimalistic environment.</br>  
+  My tiny environment setup with ZSH and Tmux</br>
+  for Mac and Linux</br>
   You can see more dotfiles <a href="https://dotfiles.github.io">here</a>.
 </p>
 
@@ -23,7 +21,8 @@ $ ./setup
 
 ### Customs:
 
+for customizing your env, add this:
+
 ```sh
 touch ~/.dotfiles_custom
 ```
-

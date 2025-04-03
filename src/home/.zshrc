@@ -7,12 +7,6 @@ autoload -Uz history-beginning-search-menu
 ANTIGEN_PATH=$(dirname $(dirname $(readlink ~/.zshrc)))/../lib/antigen/antigen.zsh
 source $ANTIGEN_PATH
 
-# profile
-source ~/.bash_profile
-source ~/.exports
-source ~/.aliases
-source ~/.functions
-
 # bundle plugins
 declare -a plugins=(
   'zsh-users/zsh-syntax-highlighting'
@@ -49,10 +43,17 @@ setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_REDUCE_BLANKS
 setopt SHARE_HISTORY # share history between sessions
 setopt APPEND_HISTORY
-
 export HISTFILE=~/.zsh_history
 export SAVEHIST=100
 export HISTSIZE=1000
+
+# colors
+export CLICOLOR=1 # enable colors in terminal
+export LS_COLORS='fi=0:di=1;37:ln=37:ex=36:or=31:mi=31:bd=0:cd=0' # set colors for filesl
+
+# other
+export GPG_TTY=$(tty) # fix pass input
+export TOOLCHAINS=swift
 
 # customs if exists
 [ -f "$HOME/dotfiles_custom" ] && source "$HOME/dotfiles_custom"

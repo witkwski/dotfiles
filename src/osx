@@ -7,8 +7,3 @@ touch ~/.hushlogin
 
 # remove new line square brackets
 defaults write com.apple.Terminal ShowLineMarks -int 0
-
-# user iterm profile
-defaults delete com.googlecode.iterm2
-cp "$src_path/iterm/com.googlecode.iterm2.plist" ~/Library/Preferences/
-defaults read -app iTerm > /dev/null

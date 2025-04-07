@@ -25,7 +25,6 @@ esac
 declare -a files=(
   '.tmux.conf'
   '.zshrc'
-  '.exports'
 )
 
 # backup and symlinking

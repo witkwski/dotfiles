@@ -4,13 +4,13 @@
 
 <p align="center">
   My tiny environment setup with ZSH and Tmux</br>
-  for Mac and Linux</br>
+  for Mac and Linux.</br>
   You can see more dotfiles <a href="https://dotfiles.github.io">here</a>.
 </p>
 
 ### Installation:
 
-It backups your old dotfiles into `~/.old_dots_backup` folder
+It backups old dotfiles into `~/.old_dots_backup` folder
 
 ```sh
 $ git clone --recursive https://github.com/witkwski/dotfiles.git
@@ -21,7 +21,7 @@ $ ./setup
 
 ### Customs:
 
-for customizing your env, add this:
+for customization, add this:
 
 ```sh
 touch ~/.dotfiles_custom

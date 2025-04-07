@@ -1,13 +1,10 @@
-# TODO: clean this mess
-
+# bundle antigen plugins
 autoload -Uz colors && colors
 autoload -Uz history-beginning-search-menu
 
-# find antigen
 ANTIGEN_PATH=$(dirname $(dirname $(readlink ~/.zshrc)))/../lib/antigen/antigen.zsh
 source $ANTIGEN_PATH
 
-# bundle plugins
 declare -a plugins=(
   'zsh-users/zsh-syntax-highlighting'
   'tarruda/zsh-autosuggestions'
@@ -18,13 +15,13 @@ do
   antigen bundle $plugin
 done
 
+antigen apply
+
 # set prompts
 git_prompt() {
   temp=`git symbolic-ref HEAD 2>/dev/null --short | cut -d / -f 2`
   if [ "$temp" != "" ]; then echo "$temp"; fi
 }
-
-antigen apply
 
 setopt prompt_subst
 
@@ -55,5 +52,13 @@ export LS_COLORS='fi=0:di=1;37:ln=37:ex=36:or=31:mi=31:bd=0:cd=0' # set colors f
 export GPG_TTY=$(tty) # fix pass input
 export TOOLCHAINS=swift
 
-# customs if exists
-[ -f "$HOME/dotfiles_custom" ] && source "$HOME/dotfiles_custom"
+# customs and bash stuff
+declare -a files=(
+  '.bash_profile'
+  '.dotfiles_custom'
+)
+
+for file in "${files[@]}"
+do
+  [ -f "$HOME/$file" ] && source "$HOME/$file"
+done

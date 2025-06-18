@@ -50,6 +50,7 @@ export LS_COLORS='fi=0:di=1;37:ln=37:ex=36:or=31:mi=31:bd=0:cd=0' # set colors f
 
 # other
 export GPG_TTY=$(tty) # fix pass input
+unset zle_bracketed_paste
 export TOOLCHAINS=swift
 
 # customs and bash stuff

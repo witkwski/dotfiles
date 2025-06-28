@@ -25,8 +25,18 @@ git_prompt() {
 
 setopt prompt_subst
 
-export PROMPT=" %{$fg_no_bold[cyan]%}% > %{$reset_color%}% "
-export RPROMPT='%{$fg_no_bold[green]%}% $(git_prompt)%{$reset_color%}%'
+if [[ "$TERM_PROGRAM" == "vscode" ]]; then
+  unset RPROMPT
+  unset RPS1
+  unsetopt PROMPT_SP
+  unsetopt PROMPT_CR
+  unsetopt TRANSIENT_RPROMPT
+
+  export PS1='%F{green}$(git_prompt)%f%F{yellow} >%f '
+else
+  export PROMPT='%F{yellow} >%f '
+  export RPROMPT='%F{green}$(git_prompt)%f'
+fi
 
 # autocompletion menu
 setopt menucomplete
